@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="layui225/css/layui.css" media="all">
+    <title>Document</title>
+    <style>
+        #odiv{
+            font-size: 30px;
+            line-height: 30px;
+            margin: 30px auto;
+            width:450px;
+            height: 300px;
+            color: #c00;
+            font-family: "微软雅黑", Verdana;
+        }
+
+    </style>
+</head>
+<body>
+<input type="text" name="number1" id="number1" class="layui-input-inline">
+<select name="ysf" id="ysf" class="layui-input-inline">
+    <option value="+">加</option>
+    <option value="-">减</option>
+    <option value="*">乘</option>
+    <option value="/">除</option>
+</select>
+<input type="text" name="number2" id="number2" class="layui-input-inline">
+<input type="button" value="等于" id="ok" class="layui-btn layui-btn-danger layui-btn-sm">
+<div id="odiv"></div>
+</body>
+<script src="js/jquery-1.10.2.min.js"></script>
+
+<script>
+    $(function () {
+        $("#ok").click(function () {
+            var a = parseFloat($("#number1").val());
+            var b = parseFloat($("#number2").val());
+
+                if(!$.isNumeric(a)){
+                    $("#odiv").html($("#number1").val()+"不是一个数值型");
+                    return false;
+                }
+            if(!$.isNumeric(b)){
+                $("#odiv").html($("#number2").val()+"不是一个数值型");
+                return false;
+            }
+            var ysf = $("#ysf").val();
+            switch(ysf){
+                case "+":
+                    $("#odiv").html(a+" + "+b+" = "+(a+b));
+                    break;
+                case "-":
+                    $("#odiv").html(a+" - "+b+" = "+(a-b));
+                    break;
+                case "*":
+                    $("#odiv").html(a+" * "+b+" = "+(a*b));
+                    break;
+                case "/":
+                    $("#odiv").html(a+" / "+b+" = "+(a/b));
+                    break;
+            }
+        })
+    })
+</script>
+</html>

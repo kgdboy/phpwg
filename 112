@@ -1,0 +1,15 @@
+<!--
+        对request属性集中存储的数据进行访问
+        方法一：用el表达 式的<c:forEach>标签实现，详见TestWeb工程的show.jsp
+        方法二：直接 用${<变量名>}的方式，直接 引用request里面的变量。
+
+    <c:forEach items = "${infolist}" var="rec">
+    <tr>
+        <td>${rec.info_id}</td>
+        <td>${rec.info_id}</td>
+        <td>${rec.info_id}</td>
+        <td>${rec.info_id}</td>
+        <td>${rec.info_id}</td>
+        <td>${rec.info_id}</td>
+    </tr>
+    </c:forEach> -->

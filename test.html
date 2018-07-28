@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    <style>
+        .odiv1{
+            width: 100px;
+            height: 100px;
+            border:2px solid #c00;
+            background: green;
+            float: left;
+        }
+        .odiv2{
+            width: 140px;
+            height: 100px;
+            border:2px solid #c00;
+            background:yellow;
+        }
+        .odiv{
+            width: 100px;
+            height: 100px;
+            border:2px solid #c00;
+            background: #000;
+        }
+        .ospan{
+            width: 100px;
+            height: 100px;
+            display: block;
+        }
+        #odiv{
+            width: 50px;
+            height: 50px;
+            font-family: "微软雅黑", Verdana;
+            line-height: 50px;
+            text-align: center;
+            border:2px solid #000;
+            font-size: 30px;
+
+        }
+    </style>
+    </head>
+    <body>
+        <!--
+        1. 23 使用div span 标签 来展示块元素与行元素的不同，设置宽和高等
+        2. 24 演示 s标签  b标签 strong标签
+        3. 25 设置文字大小，设置字体，文字在div内居中
+        4. 26 js声明长度为10的数组
+        5. 27 var(全局污染) let
+        6. 30 判断相等
+        7. JS 16 浮动 脱离文档流
+        8. js 17 行级标签 设置宽和高
+        -->
+        <!--<div class="odiv1">1</div>-->
+        <!--<div class="odiv2">2</div>-->
+
+        姓名：<input type="text" name="name" id="name">
+
+
+        <input type="hidden" name="key" id="key" value="123" disabled readonly>
+
+    </body>
+    <script src="../jq4/jquery-1.10.2.min.js"></script>
+    <script>
+        function f() {
+            function alert() {
+                x=5;
+                document.write("abc");
+            }
+            alert("a");
+            alert("a");
+        }
+        f();
+        // alert(isNaN("aa"));
+    </script>
+</html>
